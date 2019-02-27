@@ -17,8 +17,12 @@ export default class Screen3 extends Component {
       }
 
     render() {
-      return (        
-          <Text style={styles.root}>This is Overlay screen3</Text>
+      return (  
+        <View style={styles.root}>
+          <Text >This is Overlay screen3</Text>
+          <Text onPress={()=>{Navigation.dismissOverlay(this.props.componentId);}}>X</Text>
+        </View>      
+          
       );
     }
   }
@@ -27,6 +31,8 @@ export default class Screen3 extends Component {
         backgroundColor:'red',
         color:'white',
         marginTop: 100,
+        flexDirection: 'row',
+        justifyContent:'space-around'
     }
   });
   
